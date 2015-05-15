@@ -35,6 +35,9 @@
 			var file = files.item(0);
 			if (file.type.match(/^image/)) {
 				fileReader.readAsDataURL(file);
+				dropArea.textContent = dragInstructions;
+			} else {
+				dropArea.textContent = imageError;
 			}
 		}
 	});
